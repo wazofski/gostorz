@@ -1,0 +1,16 @@
+types:
+  - kind: Object
+    name: World
+    external: WorldExternal
+    internal: WorldInternal
+    primarykey: external.name
+  - kind: Struct
+    name: WorldExternal
+    properties:
+      - name: name
+        type: string
+  - kind: Struct
+    name: WorldInternal
+    properties:
+      - name: description
+        type: string

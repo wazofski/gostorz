@@ -1,0 +1,14 @@
+module {{.}}
+
+go 1.18
+
+replace github.com/wazofski/storz => /Users/wazofski/kkode/storz
+
+require github.com/wazofski/storz v0.1.1
+
+require (
+	github.com/Jeffail/gabs v1.4.0 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
+	golang.org/x/exp v0.0.0-20221012211006-4de253d81b95 // indirect
+)

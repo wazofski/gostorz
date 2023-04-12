@@ -1,0 +1,28 @@
+package main
+
+import (
+	"{{.}}/generated"
+	"time"
+
+	"github.com/wazofski/storz/memory"
+	"github.com/wazofski/storz/react"
+	"github.com/wazofski/storz/rest"
+	"github.com/wazofski/storz/store"
+)
+
+func main() {
+	sch := generated.Schema()
+
+	mem := store.New(sch, memory.Factory())
+	rct := store.New(sch, react.ReactFactory(mem))
+
+	srv := rest.Server(sch, rct,
+		rest.TypeMethods(generated.WorldKind(),
+			rest.ActionGet, rest.ActionCreate,
+			rest.ActionDelete, rest.ActionUpdate))
+	
+	cancel := srv.Listen(8000)
+
+	time.Sleep(1 * time.Hour)
+	cancel()
+}

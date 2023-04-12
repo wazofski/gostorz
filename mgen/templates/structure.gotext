@@ -1,0 +1,31 @@
+{{ $name := .Name }} 
+type _{{ $name }} struct {
+	{{ range .Embeds }}	{{ . }}
+	{{ end }}
+	{{ range .Props }}	{{ .Name }}_ *{{.Type}} `json:"{{ .Json }}"`
+	{{ end }}
+}
+
+{{ range .Props }}
+
+{{ if not (eq .Name "External") }}
+func (entity *_{{$name}}) Set{{ .Name }}(val {{.Type}}) {
+	entity.{{.Name}}_ = &val
+}
+{{ end }}
+
+func (entity *_{{$name}}) {{ .Name }}() {{.Type}}{
+	return *entity.{{.Name}}_
+}
+{{ end }}
+
+func {{ .Name }}Factory() {{.Name}} {
+	{{ range .Props }}{{ .Name }}_ := {{ .Default }}
+	{{ end }}
+	
+	return &_{{ .Name }} {
+		{{ range .Props }}{{ .Name }}_: &{{ .Name }}_,
+		{{ end }}
+	}
+}
+

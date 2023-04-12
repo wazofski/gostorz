@@ -1,0 +1,9 @@
+
+func (entity *_{{ .A }}) ExternalInternalSet(val interface{}) {
+	converted := val.({{ .B }})
+	entity.External_ = &converted
+}
+
+func (entity *_{{ .A }}) ExternalInternal() interface{} {
+	return entity.External()
+}

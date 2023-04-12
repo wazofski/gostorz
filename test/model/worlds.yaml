@@ -1,0 +1,47 @@
+types:
+  - kind: Object
+    name: World
+    external: WorldExternal
+    internal: WorldInternal
+    primarykey: external.name
+  - kind: Object
+    name: SecondWorld
+    external: WorldExternal
+    primarykey: external.name
+  - kind: Object
+    name: ThirdWorld
+    external: WorldExternal
+    primarykey: external.name
+  - kind: Struct
+    name: WorldExternal
+    properties:
+      - name: name
+        type: string
+      - name: description
+        type: string
+      - name: nested
+        type: NestedWorld
+  - kind: Struct
+    name: WorldInternal
+    properties:
+      - name: description
+        type: string
+      - name: list
+        type: "[]NestedWorld"
+      - name: map
+        type: "map[string]NestedWorld"
+  - kind: Struct
+    name: NestedWorld
+    properties:
+      - name: description
+        type: string
+      - name: anotherDescription
+        type: string
+      - name: counter
+        type: int
+      - name: alive
+        type: bool
+      - name: l1
+        type: "[]bool"
+      - name: l2
+        type: map[string]int

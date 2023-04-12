@@ -1,0 +1,65 @@
+func (entity *_{{.Name}}) UnmarshalJSON(data []byte) error {
+	rawMap := make(map[string]*json.RawMessage)
+	err := json.Unmarshal(data, &rawMap)
+	if err != nil {
+		return err
+	}
+
+	for key, rawValue := range rawMap {
+		if rawValue == nil {
+			continue
+		}
+		switch key {
+		{{ range .Props }}
+		case "{{.Json}}":
+			{{ if .IsArray }}
+			res := {{ .Default }}
+			rawList := []*json.RawMessage {}
+			err = json.Unmarshal(*rawValue, &rawList)
+			if err != nil {
+				return err
+			}
+
+			for _, rw := range rawList {
+				ud := {{.StrippedDefault}}
+				err = json.Unmarshal(*rw, &ud)
+				if err != nil {
+					return err
+				}
+				res = append(res, ud)
+			}
+
+			entity.{{.Name}}_ = &res
+			{{ else }}{{ if .IsMap }}
+			res := {{ .Default }}
+			rawSubmap := make(map[string]*json.RawMessage)
+			err = json.Unmarshal(*rawValue, &rawSubmap)
+			if err != nil {
+				return err
+			}
+
+			for k, rw := range rawSubmap {
+				ud := {{.StrippedDefault}}
+				err = json.Unmarshal(*rw, &ud)
+				if err != nil {
+					return err
+				}
+				res[k] = ud
+			}
+
+			entity.{{.Name}}_ = &res
+			{{ else }}
+			err := json.Unmarshal(*rawValue, entity.{{.Name}}_)
+			if err != nil {
+				return err
+			}
+			{{ end }}
+			{{ end }}
+		{{ end }}
+
+		default:
+		}
+	}
+	return nil
+}
+

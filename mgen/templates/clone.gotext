@@ -1,0 +1,3 @@
+func (entity *_{{.Name}}) Clone() store.Object {
+	return utils.CloneObject(entity, Schema())
+}

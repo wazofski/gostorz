@@ -1,0 +1,29 @@
+
+type _Schema struct {
+	Objects []string
+}
+
+func (o _Schema) ObjectForKind(kind string) store.Object {
+	switch kind {
+	{{ range . }}
+	case "{{.Name}}":
+		return {{.Name}}Factory()
+	case "{{.IdentityPrefix }}":
+		return {{.Name}}Factory()
+	{{ end }}
+	}
+
+	return nil
+}
+
+func (o _Schema) Types() []string {
+	return o.Objects
+}
+
+func Schema() store.SchemaHolder {
+	list := []string{
+		{{ range . }} "{{.Name}}", {{ end }}
+	}
+	
+	return _Schema { Objects: list }
+}
