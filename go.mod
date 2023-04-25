@@ -1,4 +1,4 @@
-module github.com/wazofski/storz
+module github.com/wazofski/gostorz
 
 go 1.18
 

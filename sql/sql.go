@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/wazofski/storz/internal/constants"
-	"github.com/wazofski/storz/internal/logger"
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/internal/constants"
+	"github.com/wazofski/gostorz/internal/logger"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
+	"github.com/wazofski/gostorz/utils"
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/mattn/go-sqlite3"

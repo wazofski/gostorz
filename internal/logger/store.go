@@ -3,8 +3,8 @@ package logger
 import (
 	"context"
 
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 type loggerStore struct {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/wazofski/storz/cmd"
+	"github.com/wazofski/gostorz/cmd"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/utils"
 )
 
 type Logger interface {

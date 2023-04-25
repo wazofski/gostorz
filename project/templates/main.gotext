@@ -4,10 +4,10 @@ import (
 	"{{.}}/generated"
 	"time"
 
-	"github.com/wazofski/storz/memory"
-	"github.com/wazofski/storz/react"
-	"github.com/wazofski/storz/rest"
-	"github.com/wazofski/storz/store"
+	"github.com/wazofski/gostorz/memory"
+	"github.com/wazofski/gostorz/react"
+	"github.com/wazofski/gostorz/rest"
+	"github.com/wazofski/gostorz/store"
 )
 
 func main() {

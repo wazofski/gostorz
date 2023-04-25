@@ -7,14 +7,14 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/wazofski/storz/project"
+	"github.com/wazofski/gostorz/project"
 )
 
 // initCmd represents the init command
 var initCmd = &cobra.Command{
 	Use:   "init",
-	Short: "Initialize a storz project",
-	Long: `Create a storz project with a sample model and structure.
+	Short: "Initialize a gostorz project",
+	Long: `Create a gostorz project with a sample model and structure.
 For example:
 	storz init example`,
 	Run: func(cmd *cobra.Command, args []string) {

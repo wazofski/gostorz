@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/wazofski/storz/internal/constants"
-	"github.com/wazofski/storz/internal/logger"
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/internal/constants"
+	"github.com/wazofski/gostorz/internal/logger"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
+	"github.com/wazofski/gostorz/utils"
 )
 
 type internalStore struct {

@@ -8,7 +8,7 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/utils"
 )
 
 func Generate(name string) string {

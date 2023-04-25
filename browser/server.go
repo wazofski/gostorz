@@ -12,10 +12,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/wazofski/storz/internal/logger"
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/internal/logger"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
+	"github.com/wazofski/gostorz/utils"
 )
 
 var log = logger.Factory("browser")

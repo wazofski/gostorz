@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 type restHeaderOption struct {

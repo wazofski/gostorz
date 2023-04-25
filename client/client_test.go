@@ -6,10 +6,10 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/wazofski/storz/client"
-	"github.com/wazofski/storz/generated"
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/client"
+	"github.com/wazofski/gostorz/generated"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 var _ = Describe("client", func() {

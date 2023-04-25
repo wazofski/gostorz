@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 type cacheExpiryOption struct {

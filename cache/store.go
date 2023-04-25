@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/wazofski/storz/internal/logger"
-	"github.com/wazofski/storz/memory"
-	"github.com/wazofski/storz/store"
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/internal/logger"
+	"github.com/wazofski/gostorz/memory"
+	"github.com/wazofski/gostorz/store"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 var log = logger.Factory("cache")

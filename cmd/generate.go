@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/wazofski/storz/mgen"
+	"github.com/wazofski/gostorz/mgen"
 )
 
 // generateCmd represents the generate command

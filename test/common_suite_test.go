@@ -9,16 +9,16 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/wazofski/storz/cache"
-	"github.com/wazofski/storz/client"
-	"github.com/wazofski/storz/generated"
-	"github.com/wazofski/storz/internal/logger"
-	"github.com/wazofski/storz/memory"
-	"github.com/wazofski/storz/mongo"
-	"github.com/wazofski/storz/react"
-	"github.com/wazofski/storz/rest"
-	"github.com/wazofski/storz/sql"
-	"github.com/wazofski/storz/store"
+	"github.com/wazofski/gostorz/cache"
+	"github.com/wazofski/gostorz/client"
+	"github.com/wazofski/gostorz/generated"
+	"github.com/wazofski/gostorz/internal/logger"
+	"github.com/wazofski/gostorz/memory"
+	"github.com/wazofski/gostorz/mongo"
+	"github.com/wazofski/gostorz/react"
+	"github.com/wazofski/gostorz/rest"
+	"github.com/wazofski/gostorz/sql"
+	"github.com/wazofski/gostorz/store"
 )
 
 type initializer func()

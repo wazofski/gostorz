@@ -6,10 +6,10 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/wazofski/storz/cache"
-	"github.com/wazofski/storz/generated"
-	"github.com/wazofski/storz/memory"
-	"github.com/wazofski/storz/store"
+	"github.com/wazofski/gostorz/cache"
+	"github.com/wazofski/gostorz/generated"
+	"github.com/wazofski/gostorz/memory"
+	"github.com/wazofski/gostorz/store"
 )
 
 func TestCache(t *testing.T) {

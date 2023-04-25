@@ -6,8 +6,8 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/wazofski/storz/generated"
-	"github.com/wazofski/storz/store"
+	"github.com/wazofski/gostorz/generated"
+	"github.com/wazofski/gostorz/store"
 )
 
 func WorldCreateCb(obj store.Object, str store.Store) error {

@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/wazofski/storz/utils"
+	"github.com/wazofski/gostorz/utils"
 )
 
 func Generate(model string) error {
@@ -21,8 +21,8 @@ func Generate(model string) error {
 		// "strings",
 		"fmt",
 		"encoding/json",
-		"github.com/wazofski/storz/utils",
-		"github.com/wazofski/storz/store",
+		"github.com/wazofski/gostorz/utils",
+		"github.com/wazofski/gostorz/store",
 	}
 
 	var b strings.Builder

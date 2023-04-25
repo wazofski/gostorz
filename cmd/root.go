@@ -14,12 +14,12 @@ const VERSION = "v0.0.3"
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "storz",
+	Use:   "gostorz",
 	Short: "Object store and service bootstrap framework",
 	Long: fmt.Sprintf(`storz %s
 An object store framework
 
-github.com/wazofski/storz
+github.com/wazofski/gostorz
 
 `, VERSION),
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/wazofski/storz/store/options"
+	"github.com/wazofski/gostorz/store/options"
 )
 
 type Endpoint interface {

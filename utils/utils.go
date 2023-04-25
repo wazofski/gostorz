@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/Jeffail/gabs"
-	"github.com/wazofski/storz/internal/constants"
-	"github.com/wazofski/storz/store"
+	"github.com/wazofski/gostorz/internal/constants"
+	"github.com/wazofski/gostorz/store"
 )
 
 type _MetaHolder struct {

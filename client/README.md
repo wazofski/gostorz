@@ -1,5 +1,5 @@
 # REST Client Store
-Store implementation that uses a remote [storz REST Server](https://github.com/wazofski/storz/tree/main/rest) as storage
+Store implementation that uses a remote [storz REST Server](https://github.com/wazofski/gostorz/tree/main/rest) as storage
 
 ## Usage
 ```
